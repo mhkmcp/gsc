@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<!-- <link rel="stylesheet" href="css/bootstrap.min.css"> -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+		integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+	<link href='https://fonts.googleapis.com/css?family=Roboto:400,300,700' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+	<link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+</head>
+
+<body>
+
+	<!-- Header  -->
+
+	<header>
+		<div class="container-fluid">
+			<!-- Top Menu  -->
+			<div class="row d-flex flex-column">
+				<div class="top-menu d-flex flex-row justify-content-between">
+					<!-- Top Menu Left Side  -->
+					<div class="top-menu-left pl-2">
+						<ul class="d-flex flex-row">
+							<li><a href="#">০১৭১৬৪৯১৮৭১</a></li>
+							<li><a href="#">info@cssljamalpur.com, cssljamalpur@gmail.com </a></li>
+							<li><a href="#">নিপা-নাহিদ সুপার মার্কেট, রুম নং-২ ও ৩ (নিচতলা), মাতারপাড়া রোড, ছোনটিয়া
+									বাজার, জামালপুর।</a></li>
+						</ul>
+
+					</div>
+					<!-- /Top Menu Left Side  -->
+					<!-- Top Menu Right Side  -->
+					<div class="top-menu-right d-flex flex-row pr-2">
+						<ul class="d-flex flex-row justify-content-between">
+							<li><a href="#">icon1</a></li>
+							<li><a href="#">icon2</a></li>
+							<li><a href="#">icon3</a></li>
+							<li><a href="#">icon4</a></li>
+						</ul>
+					</div>
+					<!-- /Top Menu Right Side  -->
+				</div>
+				<!-- /Top Menu  -->
+
+
+				<!-- Logo Menu  -->
+				<div class="logo-menu d-flex flex-row justify-content-between">
+					<!-- Logo Menu Left  -->
+					<div class="logo-menu-left d-flex flex-row pl-5">
+						<!-- <img src="" alt="Logo"> -->
+						<img src="{% static 'img/logo.png' %}" alt="Logo">
+					</div>
+					<!-- /Logo Menu Left  -->
+
+					<!-- Logo Menu Right  -->
+					<div class="logo-menu-right">
+						<img src="" alt="Ads">
+					</div>
+					<!-- Logo Menu Right  -->
+				</div>
+				<!-- Logo Menu  -->
+
+
+				<!-- Main Menu  -->
+				<div class="main-menu">
+
+					<!-- Content  -->
+					<div class="nav container-fluid">
+						<ul>
+							<li><a href="{% url 'home' %}">হোম</a></li>
+							<li><a href="#">আমাদের সম্পর্কে</a>
+								<ul>
+									<li><a href="{% url 'intro' %}">পরিচিতি</a></li>
+									<li><a href="{% url 'purpose' %}">লক্ষ্য ও উদ্দেশ্য</a></li>
+									<li><a href="{% url 'president_speech' %}">সভাপতির বক্তব্য</a></li>
+									<li><a href="{% url 'courtesy_speech' %}">শুভেচ্ছা বাণী</a></li>
+								</ul>
+							</li>
+							<li><a href="#">পরিষদ</a>
+								<ul>
+									<li><a href="{% url 'adviser' %}">উপদেষ্টা পরিষদ</a>
+									</li>
+									<li><a href="{% url 'management' %}">ব্যবস্থাপনা পরিষদ</a>
+									</li>
+									<li><a href="{% url 'general' %}">সাধারন পরিষদ</a>
+									</li>
+									<li><a href="{% url 'election' %}">নির্বাচন পরিষদ</a>
+									</li>
+								</ul>
+							</li>
+							<li><a href="#">সদস্য</a>
+								<ul>
+									<li><a href="{% url 'requirements' %}">সদস্য হওয়ার যোগ্যতা</a>
+									</li>
+									<li><a href="{% url 'how_to_be_member' %}">কিভাবে সদস্য হবেন</a>
+									</li>
+									<li><a href="{% url 'admission_form' %}">সদস্য ভর্তি ফর্ম</a>
+									</li>
+									<li><a href="{% url 'member_list' %}">সদস্যের তালিকা</a>
+									</li>
+									<li><a href="{% url 'general_member' %}">সাধারন সদস্য</a>
+									</li>
+									<li><a href="{% url 'lifetime_member' %}">আজীবন সদস্য</a>
+									</li>
+									<li><a href="{% url 'honorary_member' %}">অনারারি সদস্য</a>
+									</li>
+									<li><a href="{% url 'member_info' %}">সদস্যের তথ্যাবলি</a>
+									</li>
+									<li><a href="{% url 'member_share' %}">সদস্যের শেয়ার</a>
+									</li>
+									<li><a href="{% url 'collection_info' %}">বাৎসরিক চাঁদা তথ্য</a>
+									</li>
+									<li><a href="{% url 'audit_report' %}">অডিট রিপোর্ট</a>
+									</li>
+									<li><a href="{% url 'blood_group_dob' %}">জন্ম তারিখ ও রক্ত ​​গ্রুপ</a>
+									</li>
+								</ul>
+							</li>
+							<li><a href="#">বিনিয়োগ </a>
+								<ul>
+									<li><a href="{% url 'financial' %}">আর্থিক প্রতিষ্ঠানে</a>
+									</li>
+									<li><a href="{% url 'other_way' %}">অন্যভাবে</a>
+									</li>
+								</ul>
+							</li>
+							<li><a href="#">কল্যান </a>
+								<ul>
+									<li><a href="{% url 'scholarship' %}">বৃত্তি</a>
+									</li>
+									<li><a href="{% url 'treatment' %}">চিকিৎসা সহায়তা</a>
+									</li>
+									<li><a href="{% url 'training' %}">প্রশিক্ষণ সহায়তা</a>
+									</li>
+								</ul>
+							</li>
+							<li><a href="#">ডাউনলোড </a>
+								<ul>
+									<li><a href="#">গঠনতন্ত্র</a>
+									</li>
+									<li><a href="#">সদস্য ভর্তি ফর্ম ডাউনলোড</a>
+									</li>
+									<li><a href="#">ডিরেক্টরী</a>
+										<!-- <ul>
+											<li><a href="#">ডিরেক্টরী-১</a>
+											</li>
+											<li><a href="#">ডিরেক্টরী-২</a>
+											</li>
+										</ul> -->
+									</li>
+									<li><a href="#">সাময়িকী</a>
+									</li>
+									<li><a href="#">কুইজ</a>
+										<ul>
+											<li><a href="#">কুইজ ১</a>
+											</li>
+											<li><a href="#">কুইজ ২</a>
+											</li>
+											<li><a href="#">কুইজ ৩</a>
+											</li>
+										</ul>
+									</li>
+									<li><a href="#">চাকরি প্রত্যাশী তালিকা</a>
+									</li>
+								</ul>
+							</li>
+
+							<li><a href="#">ফটোগ্যালারী</a></li>
+							<li><a href="#">নিউজ ও ইভেন্টস্</a></li>
+							<li><a href="#">ইউনিয়ন তথ্য </a>
+								<ul>
+									<li><a href="">ইতিহাসে দিগপাইত</a>
+									</li>
+									<li><a href="">চাকরিজীবীর তালিকা</a>
+									</li>
+									<li><a href="">এক নজরে ইউনিয়ন</a>
+
+									</li>
+									<li><a href="">ইউনিয়ন পরিষদ তথ্য</a>
+
+									</li>
+									<li><a href="">ইউনিয়ন মুক্তিযোদ্ধা</a>
+
+									</li>
+									<li><a href="">ওয়াড ভিত্তিক গ্রাম</a>
+									</li>
+									<li><a href="">শিক্ষা প্রতিষ্ঠানের ইতিহাস</a>
+										<ul class="wsmenu-submenu">
+											<li><a href="index.php?pages=page&amp;id=40">ছোনটিয়া উচ্চ বিদ্যালয়</a>
+				
+											</li>
+											<li><a href="index.php?pages=page&amp;id=41">‌দিগপাইত ধরণী কান্ত উচ্চ বিদ্যালয়</a>
+				
+											</li>
+											<li><a href="index.php?pages=page&amp;id=42">মামুন স্মৃ‌তি পাব‌লিক স্কুল</a>
+				
+											</li>
+											<li><a href="index.php?pages=page&amp;id=43">এড‌.খ‌লিলুর রহমান উচ্চ বিদ্যালয়</a>
+				
+											</li>
+											<li><a href="index.php?pages=page&amp;id=44">হা‌জেরা-‌মোক‌ছেদ উচ্চ বিদ্যালয়</a>
+				
+											</li>
+											<li><a href="index.php?pages=page&amp;id=45">র‌হিমা-‌মোজাফ্ফর আদর্শ বা‌লিকা উচ্চ
+													বিদ্যালয়</a>
+				
+											</li>
+											<li><a href="index.php?pages=page&amp;id=46">হাসনা-ম‌ফিজ উচ্চ বিদ্যালয়</a>
+				
+											</li>
+										</ul>
+									</li>
+									<li><a href="">প্রতিষ্ঠান প্রধানের নাম</a>
+									</li>
+									<li><a href="">প্রতিষ্ঠান সভাপতির নাম</a>
+									</li>
+									<li><a href="">হাসপাতাল/কমিউনিটি সেন্টার তথ্য</a>
+									</li>
+									<li><a href="">অন্যান্য</a>
+									</li>
+								</ul>
+							</li>
+							<li><a href="#">যোগাযোগ</a></li>
+						</ul>
+					</div>
+
+					<!-- /Content  -->
+
+				</div>
+				<!-- /Main Menu  -->
+			</div>
+		</div>
+	</header>
+
+
+	{% block content %}
+	{% endblock %}
+
+
+	<footer>
+		<div class="footer-top container-fluid">
+			<div class="row">
+				<div class="col-3">
+					<h4>CONTACT DETAILS</h4>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad quia adipisci ea iure voluptatibus
+						tenetur? Recusandae soluta nulla, laudantium perspiciatis, nemo, hic quasi earum nostrum
+						voluptatum similique totam porro distinctio?</p>
+				</div>
+
+				<div class="col-3">
+					<h4>IMPORTANT LINK</h4>
+					<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illum blanditiis iste ea, atque aliquid
+						cum quisquam non explicabo maxime quas, adipisci quaerat officiis sunt ducimus autem repellat
+						ullam est accusamus?</p>
+				</div>
+				<div class="col-3">
+					<h4>REGISTRATION</h4>
+					<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Pariatur accusamus molestiae esse
+						commodi minima voluptatibus consequatur illo sed sequi sunt accusantium error optio, atque quasi
+						exercitationem tempora sint nam porro.</p>
+				</div>
+				<div class="col-3">
+					<h4>BANK DETAILS</h4>
+					<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rem, voluptatem illo. Repellendus autem
+						in tempora soluta quaerat, ullam natus numquam facilis reprehenderit officiis eaque iste
+						suscipit impedit excepturi ipsum illum!</p>
+				</div>
+			</div>
+		</div>
+		<div class="footer-center">
+			<div class="top-menu d-flex flex-row justify-content-between">
+				<!-- Top Menu Left Side  -->
+				<div class="top-menu-left pl-2">
+					<ul class="d-flex flex-row">
+						<li><a href="#">হোম</a></li>
+						<li><a href="#">পরিচিতি</a></li>
+						<li><a href="#">সদস্য ভর্তি ফর্ম</a></li>
+						<li><a href="#">সদস্যের তথ্যাবলি</a></li>
+						<li><a href="#">সাধারন সদস্য</a></li>
+						<li><a href="#">যোগাযোগ</a></li>
+						<li><a href="#">জন্ম তারিখ</a></li>
+						<li><a href="#">ওয়েব মেইল</a></li>
+						<li><a href="#">ওয়েব এসএমএস</a></li>
+					</ul>
+
+				</div>
+				<!-- /Top Menu Left Side  -->
+				<!-- Top Menu Right Side  -->
+				<div class="top-menu-right d-flex flex-row pr-2">
+					<ul class="d-flex flex-row justify-content-between">
+						<li><a href="#">icon1</a></li>
+						<li><a href="#">icon2</a></li>
+						<li><a href="#">icon3</a></li>
+						<li><a href="#">icon4</a></li>
+					</ul>
+				</div>
+				<!-- /Top Menu Right Side  -->
+			</div>
+		</div>
+
+
+		<div class="footer-bottom">
+			<div class="top-menu d-flex flex-row justify-content-between">
+				<!-- Top Menu Left Side  -->
+				<div class="top-menu-left pl-2">
+					<ul class="d-flex flex-row">
+						<li><a href="#">হোম</a></li>
+						<li><a href="#">পরিচিতি</a></li>
+						<li><a href="#">সদস্য ভর্তি ফর্ম</a></li>
+					</ul>
+
+				</div>
+				<!-- /Top Menu Left Side  -->
+				<!-- Top Menu Right Side  -->
+				<div class="top-menu-right d-flex flex-row pr-2">
+					<ul class="d-flex flex-row justify-content-between">
+						<li><a href="#">icon1</a></li>
+						<li><a href="#">icon2</a></li>
+					</ul>
+				</div>
+				<!-- /Top Menu Right Side  -->
+			</div>
+		</div>
+	</footer>
+
+
+
+
+
+
+	<!-- Optional JavaScript -->
+	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+		integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+		crossorigin="anonymous"></script>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+		integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+		crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+		integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+		crossorigin="anonymous"></script>
+
+	<script type="text/javascript" src="js/main.js"></script>
+</body>
+
+</html>
