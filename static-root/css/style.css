@@ -80,15 +80,15 @@ body {
 
 
 
-3 level menu
+/* 3 level menu */
 .nav ul li ul li ul {
 	position: absolute;
 	background: #23364B;
-	left: -1999px;
+	left: 9px;
 	display: none;
 }
 .nav ul li ul li :hover ul {
-	left: 0px;
+	left: 200px;
 	display: block;
 }
 .nav ul li ul li ul li{
