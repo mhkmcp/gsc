@@ -29,7 +29,7 @@ SECRET_KEY = 'r=v_j34opf@$6fx&tu^871f+m=fq^zt4ajmu+ejdv&@x%chp=6'
 
 DEBUG = False
 
-ALLOWED_HOSTS = ['127.0.0.1']
+ALLOWED_HOSTS = ['127.0.0.1', 'bcpiskp.herokuapp.com']
 
 
 # Application definition
