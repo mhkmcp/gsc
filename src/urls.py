@@ -35,4 +35,17 @@ urlpatterns = [
     path('treatment', treatment, name='treatment'),
     path('training', training, name='training'),
 
+    # Union
+    path('union/history/', history, name='union_history'),
+    path('union/employees/', employees, name='union_employees'),
+    path('union/at-a-glance/', at_a_glance, name='union_at_a_glance'),
+    path('union/info/', union_info, name='union_info'),
+    path('union/freedom-fighter/', freedom_fighter, name='union_freedom_fighter'),
+    path('union/villages/', village, name='union_village'),
+    path('union/head-of-institutes/', principal_list, name='union_principal_list'),
+    path('union/president-of-institutes/', institute_president_list, name='union_institute_president'),
+    path('union/hospitals-and-community-centers/', hospital_commiunity_center, name='union_hospital_community_center'),
+    path('union/institutes/', institute, name='union_institutes'),
+    # union/institute
+    path('union/institute/sonatia/', sonatia, name='institute_sonatia'),
 ]

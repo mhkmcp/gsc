@@ -116,4 +116,40 @@ def treatment(request):
     return render(request, 'pages/development/treatment.html')
 
 
+# Union
+
+def history(request):
+    return render(request, 'pages/union/history.html')
+
+def employees(request):
+    return render(request, 'pages/union/employees.html')
+
+def at_a_glance(request):
+    return render(request, 'pages/union/at-a-glance.html')
+
+def union_info(request):
+    return render(request, 'pages/union/info.html')
+
+def freedom_fighter(request):
+    return render(request, 'pages/union/freedom-fighters.html')
+
+def village(request):
+    return render(request, 'pages/union/villages.html')
+
+def principal_list(request):
+    return render(request, 'pages/union/principal.html')
+
+def institute_president_list(request):
+    return render(request, 'pages/union/institute-president.html')
+
+def hospital_commiunity_center(request):
+    return render(request, 'pages/union/hospital-and-commiunity-center.html')
+
+def institute(request):
+    return render(request, 'pages/union/institutes.html')
+
+# Union institutes
+
+def sonatia(request):
+    return render(request, 'pages/union/institute/sonatia.html')
 

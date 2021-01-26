@@ -2,6 +2,10 @@
 /*
 Baseic Set Up
 */
+
+/* bangla font */
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@400;500;600;700;800&display=swap');
+
  *,
 :after,
 :before {
@@ -14,7 +18,11 @@ body {
 	/*font-family: 'Titillium Web', sans-serif;*/
 	margin: 0;
 	padding: 0;
-	font: 300 14px/18px Roboto;
+	/* font: 300 14px/18px Roboto; */
+	font-family: 'Baloo Da 2', cursive;
+	font-size: 17px;
+	line-height: 1.8rem;
+	color: #545959;
 }
 
 .top-menu  {
@@ -121,4 +129,8 @@ body {
 footer {
 	color: #fff;
 	background: #23364B;
+}
+
+.bg-navy-blue{
+	background-color: #23364B;
 }
