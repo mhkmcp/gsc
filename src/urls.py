@@ -48,4 +48,6 @@ urlpatterns = [
     path('union/institutes/', institute, name='union_institutes'),
     # union/institute
     path('union/institute/sonatia/', sonatia, name='institute_sonatia'),
+    # contact
+    path('contact/', contact, name='contact'),
 ]

@@ -134,3 +134,9 @@ footer {
 .bg-navy-blue{
 	background-color: #23364B;
 }
+
+.social-links ul li a {
+    color: #23364B;
+    font-size: 25px;
+    padding: 5px;
+}
