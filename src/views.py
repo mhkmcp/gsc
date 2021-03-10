@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from .forms import MemberForm
 
 
 def index(request):
@@ -23,7 +24,7 @@ def courtesy_speech(request):
     return render(request, 'pages/about-us/courtesy_speech.html')
 
 
-# commiittee
+# committee
 
 def adviser(request):
     return render(request, 'pages/commiittee/adviser.html')
@@ -53,7 +54,13 @@ def how_to_be_member(request):
 
 
 def admission_form(request):
-    return render(request, 'pages/member/admission_form.html')
+    form = MemberForm()
+
+    context = {
+        'form': form
+    }
+
+    return render(request, 'pages/member/admission_form.html', context=context)
 
 
 def member_list(request):
