@@ -160,3 +160,6 @@ def institute(request):
 def sonatia(request):
     return render(request, 'pages/union/institute/sonatia.html')
 
+# contact
+def contact(request):
+    return render(request, 'pages/contact.html')
