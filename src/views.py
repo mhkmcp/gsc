@@ -1,5 +1,7 @@
-from django.shortcuts import render
-from .forms import MemberForm
+from django.shortcuts import redirect, render
+from django.contrib.auth.models import User
+
+from .forms import MemberForm, CustomUserCreationForm
 
 
 def index(request):
@@ -54,10 +56,31 @@ def how_to_be_member(request):
 
 
 def admission_form(request):
-    form = MemberForm()
+    if request.method == 'POST':
+        member_form = MemberForm(request.POST or None) # member form
+        user_creation_form = CustomUserCreationForm(request.POST or None) # signup form
+
+        if user_creation_form.is_valid() and member_form.is_valid():
+            # create new User
+            user = user_creation_form.save(commit=False)
+            user.is_active = False
+            user.save()
+
+            # create new Member
+            member = member_form.save(commit=False)
+            member.user = user
+            member.save()
+            return redirect('admission_form')
+        else:
+            print(user_creation_form.errors.as_data)
+            print(member_form.errors.as_data)
+    else:
+        member_form = MemberForm()
+        user_creation_form = CustomUserCreationForm()
 
     context = {
-        'form': form
+        'member_form': member_form,
+        'user_form': user_creation_form
     }
 
     return render(request, 'pages/member/admission_form.html', context=context)
