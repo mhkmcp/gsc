@@ -15,7 +15,7 @@ choice = (
 
 
 class Member(models.Model):
-    user = models.OneToOneField(User, on_delete=models.CASCADE, default=0)
+    user = models.OneToOneField(User, on_delete=models.CASCADE, blank=True)
     # username = models.CharField(max_length=63)
     # full_name = models.CharField(max_length=255)
     # password = models.CharField(max_length=255)
@@ -28,7 +28,7 @@ class Member(models.Model):
     country = models.CharField(max_length=127, default='')
     member_type = models.CharField(choices=choice, max_length=24, default='')
 
-    is_active = models.CharField(max_length=255, default='')
+    is_active = models.BooleanField(max_length=255, default=False)
     # date_joined
     updated_at = models.DateTimeField(auto_now=True)
 
