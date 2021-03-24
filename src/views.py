@@ -63,8 +63,13 @@ def admission_form(request):
         if user_creation_form.is_valid() and member_form.is_valid():
             # create new User
             user = user_creation_form.save(commit=False)
+            passport = member_form.cleaned_data.get('passport')
+            username = passport[:6]
+            # print(username)
+            user.username = username
             user.is_active = False
             user.save()
+            print(user)
 
             # create new Member
             member = member_form.save(commit=False)

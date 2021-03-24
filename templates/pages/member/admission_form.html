@@ -5,93 +5,96 @@
 {% block content %}
 
     <div class="container-fluid">
-        <h4>সদস্য ভর্তি ফর্ম</h4>
-        <div class="row">
+        <div class="row mt-3">
             <div class="intro-main col-9">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur aut facere maiores quidem saepe. Asperiores autem consectetur dolorum illum nesciunt nisi nobis perspiciatis quaerat quam, quos sed temporibus veritatis. Nesciunt.</p>
-                <div class="register-form mt-5">
-                    <form action="" method="POST">
+                <h3 class="text-center mt-3">সদস্য ভর্তি ফর্ম</h3>
+                <div class="register-form pl-3 mx-4">
+                    <form action="{% url 'admission_form' %}" method="POST">
                         {% csrf_token %}
 
-                        {% comment %} <p>First Name: {{user.first_name}}</p> {% endcomment %}
-                        {% comment %} <div class="form-group">
-                            <label for="firstName">First Name</label>
-                            <input type="text" name="firstName" class="form-control">
-                        </div>
-                        <div class="form-group">
-                            <label for="lastName">Last Name</label>
-                            <input type="text" name="lastName" class="form-control">
-                        </div> {% endcomment %}
-
+                        <div class="form-group row">
+                            <label for="id_full_name" class="col-sm-6 col-md-3 col-form-label">নাম</label>
+                            <div class="col-sm-6 col-md-9">
+                              <input type="text" class="form-control" id="id_full_name" name="full_name">
+                            </div>
+                          </div>
 
                         <div class="form-group row">
-                            <div class="col">
-                                <label for="id_first_name">First Name</label>
-                                <input type="text" id="id_first_name" name="first_name" class="form-control">
+                            <label for="id_father_name" class="col-sm-6 col-md-3 col-form-label">বাবার নাম</label>
+                            <div class="col-sm-6 col-md-9">
+                              <input type="text"  class="form-control" id="id_father_name" name="father_name">
                             </div>
-                            <div class="col">
-                                <label for="id_last_name">Last Name</label>
-                                <input type="text" id="id_last_name" name="last_name" class="form-control">
-                            </div>
-                        </div>
+                          </div>
 
                         <div class="form-group row">
-                            <div class="col">
-                                <label for="id_passport">Passport</label>
-                                <input type="text" id="id_passport" name="passport" class="form-control">
+                            <label for="id_mother_name" class="col-sm-6 col-md-3 col-form-label">মায়ের নাম</label>
+                            <div class="col-sm-6 col-md-9">
+                              <input type="text" class="form-control" id="id_mother_name" name="mother_name">
                             </div>
-                            <div class="col">
-                                <label for="id_date_of_birth">Date of Birth</label>
-                                <input type="date" id="id_date_of_birth" name="date_of_birth" class="form-control">
-                            </div>
-                        </div>
-
+                          </div>
 
                         <div class="form-group row">
-                            <div class="col">
-                                <label for="id_city">City</label>
-                                <input type="text" id="id_city" name="city" class="form-control">
+                            <label for="id_passport" class="col-sm-6 col-md-3 col-form-label">পাসপোর্ট</label>
+                            <div class="col-sm-6 col-md-9">
+                              <input type="text"  class="form-control" id="id_passport" name="passport">
                             </div>
-                            <div class="col">
-                                <label for="id_country">Country</label>
-                                <input type="text" id="id_country" name="country" class="form-control">
-                            </div>
-                        </div>
-
+                          </div>
 
                         <div class="form-group row">
-                            <div class="col">
-                                <label for="id_country">Member Type</label> <br>
-                                <div class="d-flex justify-content-end">
-                                    <select class="form-select form-select" name="member_type" id="id_member_type">
-                                        <option value="g">General Member</option>
-                                        <option value="l">Lifetime Member</option>
-                                        <option value="s">Super Admin</option>
-                                        <option value="a">Admin</option>
+                            <label for="id_date_of_birth" class="col-sm-6 col-md-3 col-form-label">জন্ম তারিখ</label>
+                            <div class="col-sm-6 col-md-9">
+                              <input type="date"  class="form-control" id="id_date_of_birth" name="date_of_birth">
+                            </div>
+                          </div>
+
+                        <div class="form-group row">
+                            <label for="id_phone" class="col-sm-6 col-md-3 col-form-label">মোবাইল/ফোন নং</label>
+                            <div class="col-sm-6 col-md-9">
+                              <input type="text" class="form-control" id="id_phone" name="phone">
+                            </div>
+                          </div>
+
+                        <div class="form-group row">
+                            <label for="id_member_type" class="col-sm-6 col-md-3 col-form-label">সদস্যের ধরন</label>
+                                <div class="col-sm-6 col-md-9">
+                                    <select class="form-select form-select" name="member_type" id="id_member_type"
+                                        class="col-sm-6 col-md-9">
+                                        <option value="g">সাধারণ সদস্য</option>
+                                        <option value="l">আজীবন সদস্য</option>
                                     </select>
                                 </div>
+                          </div>
+
+                        <div class="form-group row">
+                            <label for="id_city" class="col-sm-6 col-md-3 col-form-label">জেলা</label>
+                            <div class="col-sm-6 col-md-9">
+                              <input type="text"  class="form-control" id="id_city" name="city">
                             </div>
-                            <div class="col">
-                                <label for="id_username">Username</label>
-                                <input type="text" id="id_username" name="username" class="form-control">
+                          </div>
+
+                        <div class="form-group row">
+                            <label for="id_country" class="col-sm-6 col-md-3 col-form-label">দেশ</label>
+                            <div class="col-sm-6 col-md-9">
+                              <input type="text" class="form-control" id="id_country" name="country">
+                            </div>
+                          </div>
+
+                        <div class="form-group row">
+                            <label for="id_password1" class="col-sm-6 col-md-3 col-form-label">পাসওয়ার্ড</label>
+                            <div class="col-sm-6 col-md-9">
+                                <input type="password" id="id_password1" name="password1" class="form-control">
                             </div>
                         </div>
 
                         <div class="form-group row">
-                            <div class="col">
-                                <label for="id_password1">Password</label>
-                                <input type="password" id="id_password1" name="password1" class="form-control">
-                            </div>
-                            <div class="col">
-                                <label for="id_password2">Confirm Password</label>
+                            <label for="id_password2" class="col-sm-6 col-md-3 col-form-label">পাসওয়ার্ড নিশ্চিত করুন</label>
+                            <div class="col-sm-6 col-md-9">
                                 <input type="password" id="id_password2" name="password2" class="form-control">
                             </div>
                         </div>
 
-                        {% comment %} <br> {% endcomment %}
-<!--                        {{ form.as_p }}-->
                         <div class="d-flex justify-content-end">
-                            <button class="btn bg-navy-blue text-white btn-lg" type="submit">Register</button>
+                            <button class="btn bg-navy-blue text-white btn-lg" type="submit">রেজিস্টার</button>
                         </div>
                     </form>
                 </div>

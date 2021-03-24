@@ -1,0 +1,123 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% block content %}
+
+<h2 class="text-center">সদস্যবৃন্দ</h2>
+
+{% if message %}
+<p>{{message}}</p>
+{% endif %}
+
+{% if members %}
+<table class="table bg-light text-navy-blue">
+  <thead>
+    <tr>
+      <th scope="col">ছবি</th>
+      <th scope="col">নাম</th>
+      <th scope="col">ইউজারনেম</th>
+      <th scope="col">মোবাইল</th>
+      <th scope="col">অবস্থা</th>
+      <th scope="col">এপ্রুভ</th>
+    </tr>
+  </thead>
+  <tbody class="text-blue">
+    {% for member in members %}
+        <div class="member">
+            <tr class="table-success {% if member.is_approved %} {% else %} table-warning {% endif %}">
+              <th scope="row"><img class="rounded-circle" src="{% static 'img/adviser.jpg'%}" alt="Photo" width="25px"></th>
+              <th>{{member.full_name}}</th>
+              <td>{{member.user.username }}</td>
+              <td>{{member.phone}}</td>
+              <td>{{member.is_approved}}</td>
+              <td><a href="{%url 'approve' member.id %}">Approve</a></td>
+            </tr>
+        </div>
+    {% endfor %}
+  </tbody>
+
+</table>
+{% else %}
+<p>No Unapproved Members</p>
+{% endif %}
+
+
+<!-- Query -->
+
+<h3>Query & Analytics</h3>
+
+<form action="{% url 'staff-index' %}" method="post">
+  {% csrf_token %}
+  {{ query_form.as_p }}
+  <input type="submit" value="Query">
+</form>
+
+<!--  js handles the chart  -->
+<h4 class="text-center">Chart</h4>
+
+<!--<canvas id="chart" height="250px" width="250px">-->
+
+<!--</canvas>-->
+
+
+{% if subscriptions %}
+{{ count_paid }} / {{ count_total }}
+
+
+<table class="table">
+  <thead class="bg-dark text-white">
+    <tr>
+      <th scope="col">Member Name</th>
+      <th scope="col">Amount</th>
+      <th scope="col">Date</th>
+    </tr>
+  </thead>
+  <tbody class="text-blue">
+    {% for sub in subscriptions %}
+      <tr class="table-success">
+          <th>{{sub.member}}</th>
+          <td>{{sub.amount }}</td>
+          <td>{{sub.payment_date}}</td>
+      </tr>
+    {% endfor %}
+   </tbody>
+</table>
+
+{% endif %}
+
+{% endblock %}
+
+
+<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"></script>-->
+
+<!--<script>-->
+<!--  var ctx = document.getElementById('chart').getContext('2d');-->
+<!--  var myChart = new Chart(ctx, {-->
+<!--      type: 'line',-->
+<!--      data: {-->
+<!--          labels: ['Total Member', 'Paid'],-->
+<!--          datasets: [{-->
+<!--              label: 'Counts ',-->
+<!--              data: [45, 40],-->
+<!--              backgroundColor: [-->
+<!--                  'rgba(255, 99, 132, 0.2)',-->
+<!--                  'rgba(54, 162, 235, 0.2)'-->
+<!--              ],-->
+<!--              borderColor: [-->
+<!--                  'rgba(255, 99, 132, 1)',-->
+<!--                  'rgba(54, 162, 235, 1)'-->
+<!--              ],-->
+<!--              borderWidth: 1-->
+<!--          }]-->
+<!--      },-->
+<!--      options: {-->
+<!--          scales: {-->
+<!--              yAxes: [{-->
+<!--                  ticks: {-->
+<!--                      beginAtZero: true-->
+<!--                  }-->
+<!--              }]-->
+<!--          }-->
+<!--      }-->
+<!--});-->
+<!--</script>-->

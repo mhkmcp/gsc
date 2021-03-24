@@ -1,0 +1,222 @@
+{% load static %}
+
+<header>
+		<div class="container-fluid">
+			<!-- Top Menu  -->
+			<div class="row d-flex flex-column">
+				<div class="top-menu d-flex flex-row justify-content-between">
+					<!-- Top Menu Left Side  -->
+					<div class="top-menu-left pl-2">
+						<ul class="d-flex flex-row">
+							<li><a href="#">০১৭১৬৪৯১৮৭১</a></li>
+							<li><a href="#">info@cssljamalpur.com, cssljamalpur@gmail.com </a></li>
+							<li><a href="#">নিপা-নাহিদ সুপার মার্কেট, রুম নং-২ ও ৩ (নিচতলা), মাতারপাড়া রোড, ছোনটিয়া
+									বাজার, জামালপুর।</a></li>
+						</ul>
+
+					</div>
+					<!-- /Top Menu Left Side  -->
+					<!-- Top Menu Right Side  -->
+					<div class="top-menu-right d-flex flex-row pr-2">
+						<ul class="d-flex flex-row justify-content-between">
+							<li><a href="#">icon1</a></li>
+							<li><a href="#">icon2</a></li>
+							<li><a href="#">icon3</a></li>
+							<li><a href="#">icon4</a></li>
+						</ul>
+					</div>
+					<!-- /Top Menu Right Side  -->
+				</div>
+				<!-- /Top Menu  -->
+
+
+				<!-- Logo Menu  -->
+				<div class="logo-menu d-flex flex-row justify-content-between">
+					<!-- Logo Menu Left  -->
+					<div class="logo-menu-left d-flex flex-row pl-3">
+						<!-- <img src="" alt="Logo"> -->
+						<img src="{% static 'img/update_logo.png' %}" alt="Logo"
+							 height="150px"
+						>
+					</div>
+					<!-- /Logo Menu Left  -->
+
+					<!-- Logo Menu Right  -->
+					<div class="logo-menu-right">
+						<img src="" alt="Ads">
+					</div>
+					<!-- Logo Menu Right  -->
+				</div>
+				<!-- Logo Menu  -->
+
+
+				<!-- Main Menu  -->
+				<div class="main-menu">
+
+					<!-- Content  -->
+					<div class="nav container-fluid">
+						<ul>
+							<li><a href="{% url 'home' %}">হোম</a></li>
+							<li><a href="#">আমাদের সম্পর্কে</a>
+								<ul>
+									<li><a href="{% url 'intro' %}">পরিচিতি</a></li>
+									<li><a href="{% url 'purpose' %}">লক্ষ্য ও উদ্দেশ্য</a></li>
+									<li><a href="{% url 'president_speech' %}">সভাপতির বক্তব্য</a></li>
+									<li><a href="{% url 'courtesy_speech' %}">শুভেচ্ছা বাণী</a></li>
+								</ul>
+							</li>
+							<li><a href="#">পরিষদ</a>
+								<ul>
+									<li><a href="{% url 'adviser' %}">উপদেষ্টা পরিষদ</a>
+									</li>
+									<li><a href="{% url 'management' %}">ব্যবস্থাপনা পরিষদ</a>
+									</li>
+									<li><a href="{% url 'general' %}">সাধারন পরিষদ</a>
+									</li>
+									<li><a href="{% url 'election' %}">নির্বাচন পরিষদ</a>
+									</li>
+								</ul>
+							</li>
+							<li><a href="#">সদস্য</a>
+								<ul>
+									<li><a href="{% url 'requirements' %}">সদস্য হওয়ার যোগ্যতা</a>
+									</li>
+									<li><a href="{% url 'how_to_be_member' %}">কিভাবে সদস্য হবেন</a>
+									</li>
+									<li><a href="{% url 'admission_form' %}">সদস্য ভর্তি ফর্ম</a>
+									</li>
+									<li><a href="{% url 'member_list' %}">সদস্যের তালিকা</a>
+									</li>
+									<li><a href="{% url 'general_member' %}">সাধারন সদস্য</a>
+									</li>
+									<li><a href="{% url 'lifetime_member' %}">আজীবন সদস্য</a>
+									</li>
+									<li><a href="{% url 'honorary_member' %}">অনারারি সদস্য</a>
+									</li>
+									<li><a href="{% url 'member_info' %}">সদস্যের তথ্যাবলি</a>
+									</li>
+									<li><a href="{% url 'member_share' %}">সদস্যের শেয়ার</a>
+									</li>
+									<li><a href="{% url 'collection_info' %}">বাৎসরিক চাঁদা তথ্য</a>
+									</li>
+									<li><a href="{% url 'audit_report' %}">অডিট রিপোর্ট</a>
+									</li>
+									<li><a href="{% url 'blood_group_dob' %}">জন্ম তারিখ ও রক্ত ​​গ্রুপ</a>
+									</li>
+								</ul>
+							</li>
+							<li><a href="#">বিনিয়োগ </a>
+								<ul>
+									<li><a href="{% url 'financial' %}">আর্থিক প্রতিষ্ঠানে</a>
+									</li>
+									<li><a href="{% url 'other_way' %}">অন্যভাবে</a>
+									</li>
+								</ul>
+							</li>
+							<li><a href="#">কল্যান </a>
+								<ul>
+									<li><a href="{% url 'scholarship' %}">বৃত্তি</a>
+									</li>
+									<li><a href="{% url 'treatment' %}">চিকিৎসা সহায়তা</a>
+									</li>
+									<li><a href="{% url 'training' %}">প্রশিক্ষণ সহায়তা</a>
+									</li>
+								</ul>
+							</li>
+							<li><a href="#">ডাউনলোড </a>
+								<ul>
+									<li><a href="#">গঠনতন্ত্র</a>
+									</li>
+									<li><a href="#">সদস্য ভর্তি ফর্ম ডাউনলোড</a>
+									</li>
+									<li><a href="#">ডিরেক্টরী</a>
+										<!-- <ul>
+											<li><a href="#">ডিরেক্টরী-১</a>
+											</li>
+											<li><a href="#">ডিরেক্টরী-২</a>
+											</li>
+										</ul> -->
+									</li>
+									<li><a href="#">সাময়িকী</a>
+									</li>
+									<li><a href="#">কুইজ</a>
+										<ul>
+											<li><a href="#">কুইজ ১</a>
+											</li>
+											<li><a href="#">কুইজ ২</a>
+											</li>
+											<li><a href="#">কুইজ ৩</a>
+											</li>
+										</ul>
+									</li>
+									<li><a href="#">চাকরি প্রত্যাশী তালিকা</a>
+									</li>
+								</ul>
+							</li>
+
+							<li><a href="#">ফটোগ্যালারী</a></li>
+							<li><a href="#">নিউজ ও ইভেন্টস্</a></li>
+							<li><a href="#">ইউনিয়ন তথ্য </a>
+								<ul>
+									<li><a href="{% url 'union_history' %}">ইতিহাসে দিগপাইত</a>
+									</li>
+									<li><a href="{% url 'union_employees' %}">চাকরিজীবীর তালিকা</a>
+									</li>
+									<li><a href="{% url 'union_at_a_glance' %}">এক নজরে ইউনিয়ন</a>
+
+									</li>
+									<li><a href="{% url 'union_info' %}">ইউনিয়ন পরিষদ তথ্য</a>
+
+									</li>
+									<li><a href="{% url 'union_freedom_fighter' %}">ইউনিয়ন মুক্তিযোদ্ধা</a>
+
+									</li>
+									<li><a href="{% url 'union_village' %}">ওয়াড ভিত্তিক গ্রাম</a>
+									</li>
+									<li><a href="{% url 'union_institutes' %}">শিক্ষা প্রতিষ্ঠানের ইতিহাস</a>
+										<ul class="wsmenu-submenu">
+											<li><a href="{% url 'institute_sonatia' %}">ছোনটিয়া উচ্চ বিদ্যালয়</a>
+
+											</li>
+											<li><a href="index.php?pages=page&amp;id=41">‌দিগপাইত ধরণী কান্ত উচ্চ বিদ্যালয়</a>
+
+											</li>
+											<li><a href="index.php?pages=page&amp;id=42">মামুন স্মৃ‌তি পাব‌লিক স্কুল</a>
+
+											</li>
+											<li><a href="index.php?pages=page&amp;id=43">এড‌.খ‌লিলুর রহমান উচ্চ বিদ্যালয়</a>
+
+											</li>
+											<li><a href="index.php?pages=page&amp;id=44">হা‌জেরা-‌মোক‌ছেদ উচ্চ বিদ্যালয়</a>
+
+											</li>
+											<li><a href="index.php?pages=page&amp;id=45">র‌হিমা-‌মোজাফ্ফর আদর্শ বা‌লিকা উচ্চ
+													বিদ্যালয়</a>
+
+											</li>
+											<li><a href="index.php?pages=page&amp;id=46">হাসনা-ম‌ফিজ উচ্চ বিদ্যালয়</a>
+
+											</li>
+										</ul>
+									</li>
+									<li><a href="{% url 'union_principal_list' %}">প্রতিষ্ঠান প্রধানের নাম</a>
+									</li>
+									<li><a href="{% url 'union_institute_president' %}">প্রতিষ্ঠান সভাপতির নাম</a>
+									</li>
+									<li><a href="union_hospital_community_center">হাসপাতাল/কমিউনিটি সেন্টার তথ্য</a>
+									</li>
+									<li><a href="">অন্যান্য</a>
+									</li>
+								</ul>
+							</li>
+							<li><a href="{% url 'contact' %}">যোগাযোগ</a></li>
+						</ul>
+					</div>
+
+					<!-- /Content  -->
+
+				</div>
+				<!-- /Main Menu  -->
+			</div>
+		</div>
+	</header>

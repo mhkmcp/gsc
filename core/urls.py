@@ -9,6 +9,7 @@ from django.conf.urls import url
 
 urlpatterns = [
     path('', include('src.urls')),
+    path('staff/', include('staff.urls')),
     path('admin/', admin.site.urls),
 
     # url(r'^media/(?P<path>.*)$', serve, {'document_root':       settings.MEDIA_ROOT}),
